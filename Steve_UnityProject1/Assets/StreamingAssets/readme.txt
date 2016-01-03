@@ -1,0 +1,2 @@
+Most game assets are incorporated directly into the built player but there are some cases where you want the asset to be available as a separate file in its original format. For example, to play a video on iOS, you must access the video file from the filesystem rather than use it as a MovieTexture. If you place a file in a folder called StreamingAssets, it will be copied unchanged to the target machine where it will be available from a specific folder. See the page about Streaming Assets for further details.
+http://docs.unity3d.com/Manual/StreamingAssets.html

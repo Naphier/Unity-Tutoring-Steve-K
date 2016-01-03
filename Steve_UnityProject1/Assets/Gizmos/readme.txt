@@ -1,0 +1,1 @@
+Unity’s “Gizmos” allow you to add graphics to the scene view to help visualise design details that are otherwise invisible. The Gizmos.DrawIcon function places an icon in the scene to act as a marker for a special object or position. The image file used to draw this icon must be placed in a folder called Gizmos in order to be located by the DrawIcon function.

@@ -1,0 +1,1 @@
+Generally, you create instances of assets in a scene to use them in gameplay but Unity also lets you load assets on demand from a script. You do this by placing the assets in a folder called Resources or a sub-folder (you can actually have any number of Resources folders and place them anywhere in the project). These assets can then be loaded using the Resources.Load function.
