@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/day3_mouse_and_animator_final.unity
+- path: Assets/_Scenes/day1_cube_physics.unity
   isLoaded: 1
   isActive: 1

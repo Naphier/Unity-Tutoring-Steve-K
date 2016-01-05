@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class MouseInput : MonoBehaviour
+public class MouseInput_Final : MonoBehaviour
 {
     public float rotateWithMouseSensitivty = 5f;
     public float moveWithMouseSensitivity = 1f;

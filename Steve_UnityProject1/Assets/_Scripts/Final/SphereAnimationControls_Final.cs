@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Animator))]
-public class SphereAnimationControls : MonoBehaviour
+public class SphereAnimationControls_Final : MonoBehaviour
 {
     private const string BOOLNAME = "move2";
     Animator animator;
