@@ -24,4 +24,9 @@ public class SphereAnimationControls : MonoBehaviour
     {
         animator.SetBool("hop", !animator.GetBool("hop"));
     }
+
+    public void PlaybackSpeed(float playbackSpeed)
+    {
+        animator.speed = playbackSpeed;
+    }
 }
