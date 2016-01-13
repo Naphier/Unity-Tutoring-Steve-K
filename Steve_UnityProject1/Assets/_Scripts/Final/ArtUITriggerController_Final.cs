@@ -21,6 +21,7 @@ public class ArtUITriggerController_Final : MonoBehaviour
 
 
     float timer = 0f;
+    float startAlpha = 0f;
     void Update()
     {
         float time,a; 
@@ -28,12 +29,13 @@ public class ArtUITriggerController_Final : MonoBehaviour
         {
             case State.none:
                 timer = Time.time;
+                startAlpha = uiToControl.alpha;
                 break;
             case State.fadeIn:
                 if (uiToControl.alpha < 1f)
                 {
                     time = Time.time - timer;
-                    a = Mathf.Lerp(0f, 1f, time / fadeDuration);
+                    a = Mathf.Lerp(startAlpha, 1f, time / fadeDuration);
                     uiToControl.gameObject.SetActive(true);
                     uiToControl.alpha = a;
                     if (time >= fadeDuration)
@@ -46,7 +48,7 @@ public class ArtUITriggerController_Final : MonoBehaviour
                 if (uiToControl.alpha > 0f)
                 {
                     time = Time.time - timer;
-                    a = Mathf.Lerp(1f, 0f, time / fadeDuration);
+                    a = Mathf.Lerp(startAlpha, 0f, time / fadeDuration);
                     uiToControl.alpha = a;
                     if (time >= fadeDuration)
                     {
@@ -65,6 +67,7 @@ public class ArtUITriggerController_Final : MonoBehaviour
     {
         if (other.gameObject.tag == "MainCamera")
         {
+            startAlpha = uiToControl.alpha;
             timer = Time.time;
         }
 
@@ -75,6 +78,7 @@ public class ArtUITriggerController_Final : MonoBehaviour
     {
         if (other.gameObject.tag == "MainCamera")
         {
+            startAlpha = uiToControl.alpha;
             state = State.fadeIn;
         }
     }
