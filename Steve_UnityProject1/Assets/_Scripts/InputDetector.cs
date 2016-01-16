@@ -58,6 +58,7 @@ public class InputDetector : MonoBehaviour
             for (int i = 0; i <= maxButtonNum; i++)
             {
                 string joystickButton = "joystick " + j.ToString() + " button " + i.ToString();
+                //joystick 1 button 0
                 try
                 {
                     if (Input.GetKeyDown(joystickButton))

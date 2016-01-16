@@ -14,30 +14,40 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(forward))
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        if (Input.GetKey(forward) || v > 0.1f)
         {
-            transform.Translate(transform.forward * keyboardSensitivity * Time.deltaTime);
+            transform.Translate(Vector3.forward * keyboardSensitivity * Time.deltaTime);
         }
 
-        if (Input.GetKey(backward))
+        if (Input.GetKey(backward) || v < -0.1f)
         {
-            transform.Translate(-transform.forward * keyboardSensitivity * Time.deltaTime);
+            transform.Translate(-Vector3.forward * keyboardSensitivity * Time.deltaTime);
         }
 
-        if (Input.GetKey(strafeLeft))
+        if (Input.GetKey(strafeLeft) || h < -0.1f)
         {
-            transform.Translate(-transform.right * keyboardSensitivity * Time.deltaTime);
+            transform.Translate(-Vector3.right * keyboardSensitivity * Time.deltaTime);
         }
 
-        if (Input.GetKey(strafeRight))
+        if (Input.GetKey(strafeRight) || h > 0.1f)
         {
-            transform.Translate(transform.right * keyboardSensitivity * Time.deltaTime);
+            transform.Translate(Vector3.right * keyboardSensitivity * Time.deltaTime);
         }
 
         if (Input.GetMouseButton(0))
         {
             float horizontal = Input.GetAxis("Mouse X") * mouseLookSensitivity;
             transform.Rotate(transform.up * horizontal, Space.World);
+        }
+
+
+        float rightThumbHorizontal = Input.GetAxis("axis 3");
+        if (Mathf.Abs(rightThumbHorizontal) > 0.01f)
+        {
+            transform.Rotate(transform.up * rightThumbHorizontal, Space.World);
         }
     }
 }
