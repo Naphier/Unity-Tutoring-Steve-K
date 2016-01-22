@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class WordDatabaseTest : MonoBehaviour
+public class DatabaseTest : MonoBehaviour
 {
     public string[] wordsToTest;
     void Start()
@@ -13,6 +13,8 @@ public class WordDatabaseTest : MonoBehaviour
             else
                 Debug.LogError(word + " not found");
         }
+
+        //DBController.instance.DumpDB("test.sqlite");
     }
 
     void Update()
