@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Adding summary
+/// </summary>
 public class BoxAreaScript : MonoBehaviour
 {
     public GameObject cube;
