@@ -1,3 +1,3 @@
-conflict 2
-conflict1
+master conflict
+
 All materials and their textures not dedicated to a specific mesh go here.
